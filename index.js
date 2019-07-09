@@ -17,6 +17,20 @@ const comments = [
 
 // Some and Every Checks
 // Array.prototype.some() // is at least one person 19 or older?
+// Old school
+// const isAdult = people.some(function operation(person) {
+//   const currentYear = new Date().getFullYear();
+//   if (currentYear - person.year >= 19) {
+//     return true;
+//   }
+// });
+
+// Modern type
+const isAdult = people.some(
+  person => new Date().getFullYear() - person.year >= 19
+);
+
+console.log({ isAdult });
 // Array.prototype.every() // is everyone 19 or older?
 
 // Array.prototype.find()
